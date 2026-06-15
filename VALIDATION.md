@@ -8,6 +8,7 @@ Definir comandos e critérios de validação do projeto derivado.
 
 - Build.
 - Testes unitários.
+- Cobertura de linhas e branches, com 100% obrigatório para classes de regras de negócio em Java/Spring.
 - Testes de integração.
 - Lint e formatação.
 - Typecheck.

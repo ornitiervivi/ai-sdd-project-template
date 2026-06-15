@@ -71,6 +71,8 @@ Se algum arquivo estiver vazio, incompleto ou conflitante, trate isso como infor
 - Preserve compatibilidade de versões conforme `.compatibility/`.
 - Prefira contratos explícitos, validação de entrada e tratamento consistente de erros.
 - Nunca exponha segredos, tokens ou dados sensíveis.
+- Use inglês como idioma padrão para código, nomes de pacotes, classes, métodos, variáveis, branches, commits, APIs, schemas, migrações, configurações e documentação técnica do projeto derivado, salvo exigência explícita de produto ou conteúdo de usuário final localizado.
+- Não misture idiomas no mesmo projeto; se houver exceção de localização, isole-a em recursos de i18n, textos de UI ou documentação específica.
 
 ## Backend
 
@@ -120,8 +122,13 @@ Para projetos Java/Spring derivados deste template:
 - **Proibido usar `record`.** Use classes completas.
 - **Proibido adicionar comentários no código.** O código deve ser expressivo por nomes, tipos e estrutura.
 - **Proibido fazer mudanças não solicitadas.**
+- Aplique Clean Code, Clean Architecture, SOLID e design patterns adequados ao problema.
+- Use inglês em todos os nomes de código, pacotes, módulos, APIs, DTOs, entidades, propriedades, schemas, migrações e documentação técnica do projeto derivado.
+- Não misture português e inglês no código ou nos contratos técnicos.
+- Classes de regras de negócio devem ter testes unitários cobrindo 100% das linhas e 100% dos branches.
 - Quando alterar uma classe, entregue a classe completa e consistente.
 - Use código expressivo, baixa complexidade ciclomática e métodos coesos.
+- Use bibliotecas que reduzam boilerplate e deixem classes e métodos menores e mais legíveis, como Lombok, bibliotecas de collections, `StringUtils`, `Objects` e utilitários equivalentes, desde que sejam compatíveis, mantidas, seguras e justificadas.
 - Prefira nulidade segura: valide entradas, use tipos adequados e evite `NullPointerException`.
 - Prefira objetos de parâmetro ou comandos em vez de listas longas de parâmetros.
 - Separe DTOs, entidades, serviços, repositórios e mapeadores.
