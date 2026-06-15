@@ -23,3 +23,11 @@ Registrar tecnologias recomendadas, em avaliação, toleradas ou evitadas para p
 - Dependências sem justificativa clara.
 - Mistura de idiomas em código, contratos técnicos, schemas ou documentação técnica.
 - Soluções que contrariem compatibilidade definida.
+
+
+## Harness SDD
+
+- Técnica: orquestração por papéis/subagents simulados.
+- Status: adotado no template.
+- Motivo: melhora rastreabilidade, revisão especializada e controle de escopo antes de implementações em projetos derivados.
+- Observação: os papéis são genéricos e não definem produto, stack ou fornecedor específico.
