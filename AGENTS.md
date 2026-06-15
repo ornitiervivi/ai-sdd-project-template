@@ -16,10 +16,25 @@ Antes de qualquer implementação, o agente deve ler e considerar os arquivos re
 8. `SKILLS.md`
 9. `VALIDATION.md`
 10. `CODE_REVIEW.md`
-11. Arquivos aplicáveis em `.compatibility/`
-12. Skills aplicáveis em `.skills/*/SKILL.md`
+11. `AGENT_ROLES.md`
+12. Arquivos aplicáveis em `.compatibility/`
+13. Skills aplicáveis em `.skills/*/SKILL.md`
 
 Se algum arquivo estiver vazio, incompleto ou conflitante, trate isso como informação relevante e registre a lacuna no plano ou faça perguntas bloqueantes.
+
+## Orquestração obrigatória por papéis
+
+O agente deve usar os papéis especializados definidos em `AGENT_ROLES.md` conforme a natureza da tarefa. Esses papéis funcionam como subagents simulados quando não houver subagents reais disponíveis.
+
+Regras obrigatórias:
+
+- Antes de executar tarefa não trivial, selecione a menor combinação suficiente de papéis aplicáveis.
+- Para mudanças de produto ou implementação em projeto derivado, considere ao menos Product Analyst, Solution Architect, papéis de implementação relevantes, Security Reviewer, QA/Test Engineer, Code Reviewer e SDD Scribe.
+- Para mudanças neste template, mantenha o template genérico e use Product Analyst, Solution Architect, QA/Test Engineer, Code Reviewer e SDD Scribe quando aplicável.
+- Se uma tarefa envolver backend, frontend/mobile, banco de dados, IA/voz, segurança ou DevOps, o papel especializado correspondente é obrigatório.
+- Registre no plano ou na resposta quais papéis foram usados quando isso ajudar a rastreabilidade.
+- Se qualquer papel identificar ambiguidade bloqueante, pare e pergunte antes de implementar.
+- Não use papéis para inventar requisitos de negócio ou ampliar escopo não solicitado.
 
 ## Fluxo de trabalho obrigatório
 
